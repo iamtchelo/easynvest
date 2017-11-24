@@ -9,7 +9,7 @@ export default class UserStorage {
       const users = UserStorage.fetch()
 
       if (users[user.txtCPF]) {
-        reject(`The ${user.cpf} alredy exists, try again.`)
+        reject(`The ${user.txtCPF} alredy exists, try again.`)
       }
 
       users[user.txtCPF] = user
