@@ -1,0 +1,88 @@
+placeholder-input(transparent)
+
+.form
+  .group
+    position: relative
+    padding: 10px 0 20px 0
+
+    .address-map
+      display: block
+      margin: 20px 0
+      width: 100%
+      height: auto
+
+  .img-thumbnail
+    width: 100px
+    height: auto
+
+input
+  padding: 10px 0
+  width: 100%
+  outline: none
+  border: none
+  border-bottom: 1px solid $input-border-color
+  font-size: 15px
+  box-sizing(border-box)
+
+  &[required]
+    outline: none
+    box-shadow(none)
+
+  &.invalid:focus,
+  &.invalid
+    color: $input-invalid-text-color
+    border-color: $input-invalid-border-color
+
+    & + label
+      color: $input-invalid-text-color
+
+  &.success:focus,
+  &.success
+    color: $input-success-text-color
+    border-color: $input-success-border-color
+
+    & + label
+      color: $input-success-text-color
+
+  &:focus,
+  &:focus + label
+    color: $input-text-focus-color
+
+  &:focus + label,
+  &.filled + label
+    transform(translateY(-28px))
+
+input[type="file"]
+  transform(translateY(-10px))
+
+  & + label
+    display: none
+    float: left
+    padding: 10px 0
+    min-width: 150px
+    font-size: 14px
+    text-align: center
+    text-transform: uppercase
+    cursor: copy
+    background: $input-file-background-color
+    transform(translateY(-20px))
+    border-radius(5px)
+
+input[type="submit"]:focus
+  color: white
+
+label
+  position: absolute
+  top: 22px
+  left: 0
+  font-size: 16px
+  color: $input-text-color
+  transition: color 100ms ease, transform 150ms ease-out
+
+@media only screen and (max-width: 500px)
+
+  label
+    font-size: 14px
+
+  input[type="file"]
+    font-size: 12px

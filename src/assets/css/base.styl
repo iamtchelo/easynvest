@@ -1,0 +1,21 @@
+body, html
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  font: 16px Arial, Helvetica, sans-serif
+  overflow-x: hidden
+  color: $dark-gray
+  background: $light-gray
+
+.container
+  margin: 50px auto
+  padding: 30px
+  width: 600px
+  max-width: 95%
+  background: white
+  box-sizing(border-box)
+  box-shadow(0 0 10px rgba(black, 0.1))
+
+@media only screen and (max-width: 768px)
+
+  body .container
+    margin: 10px auto
